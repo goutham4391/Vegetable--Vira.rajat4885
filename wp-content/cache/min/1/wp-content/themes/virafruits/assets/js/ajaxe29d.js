@@ -1,0 +1,7 @@
+jQuery(document).ready(function(a){a("#btnSubmit").on("click",function(t){t.preventDefault();var code=$("#txtPhone").intlTelInput("getSelectedCountryData").dialCode;var phoneNumber=$('#txtPhone').val();var name=$("#txtPhone").intlTelInput("getSelectedCountryData").name;$('#txtnum').val(phoneNumber);$('#txtcode').val(code);$('#txtcountry').val(name);var c=a("#txtname").val()
+var d=a("#txtmail").val()
+var e=a("#txtcode").val()
+var f1=a("#txtnum").val()
+var g=a("#txtcountry").val()
+var h=a("#txtproduct").val()
+a.ajax({url:data.ajax_url,type:"post",data:{action:"visit_ajax",name:c,email:d,code:e,phone:f1,country:g,product:h},success:function(t){t.error?alert(t.msg):(alert(t.msg),a("#btnSubmit").addClass("disable"))},error:function(a){a.error&&alert(a.msg)},})})})
